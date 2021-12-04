@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #6772af;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #626ab8;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.danger {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.span12{
+    color: rgb(212, 51, 51);
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<!-- this is prompt -->
+
+<div class="danger">
+    <p><strong>You must fill out the form marked with *</strong></p>
+  </div>
+      
+
+
+<div class="container">
+  <form action="/Interface.html">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">*First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your first name.." required="required">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">*Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name.." required="required">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="email">*Your email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email" name="email" placeholder="Alice@..." required="required">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="pnum">Phone number</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="pnum" name="pnum" placeholder="000-000-0000" >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="c_name">*Give your character a name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="c_name" name="c_name" placeholder="" required="required">
+    </div>
+  </div>
+
+  <div class="row">
+    
+    <input type="submit" value="Ready? Click here to start!">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
